@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceBook Login Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <p>Facebook helps you connect and share with the people in your life.</p>
+        </div>
+        
+        <div class="right">
+            <form name="myform" onsubmit="return(validateform());" >
+                <h1 class="root">Sign Up</h1>
+            <h2 class="root"> It's free and anyone can join</h2><br>
+                <label for="email">Your Email:</label>
+                <input type="text" id="email" type="text">
+                <label for="pass">Password:</label>
+                <input type="password" id="password" type="password">
+                <input class="submit" type="submit" value="Sign Up">
+                <a href="" class="forget">Forgotten password?</a>
+                <div class="sign-up">
+                    <a href="" class="signupBtn">Create New Account</a>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+
+    <script>
+      
+        function validateform()
+   {  
+     var name=document.myform.email.value;  
+     var password=document.myform.password.value;  
+  
+    if (name==null || name=="")
+    {  
+     alert("Name can't be blank");  
+     return false;  
+    }
+    else if(password.length<6)
+    {  
+    alert("Password must be at least 6 characters long.");  
+    return false;  
+    }  
+  } 
+    </script>
+</body>
+</html>
